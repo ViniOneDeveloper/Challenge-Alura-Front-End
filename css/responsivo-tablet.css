@@ -1,7 +1,7 @@
 
 /* Responsividade padrão tablet */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1225px) {
 
     #menu {
         display: block;
@@ -80,9 +80,8 @@
         width: auto;
     }
     /* Header */
+
     header p {
-        display: inline-block;
-        position: absolute;
         margin: 0.3% auto auto 4%;
         font-weight: bold;
     }
@@ -90,10 +89,12 @@
     header p:before {
         display: inline-block;
         content: url("../Imagens/Logo.png");
-        margin-right: 1em;
+        margin-right: .3em;
     }
 
-
+    .nome-header2 {
+        display: none;
+    }
 
     /* Seção Apresentação */
 

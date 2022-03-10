@@ -8,92 +8,123 @@
         width: auto;
     }
     /* Header */
-    .cabecalho p {
-        display: inline-block;
-        position: absolute;
-        margin: 0.3% auto auto 4%;
-        font-weight: 700;
-        font-size: 0.6em;
-        font-style: normal;
-        line-height: 19px;
-        text-align: left;
 
+    header p {
+        display: none;
+        margin: 1% auto auto 4%;
+        font-size: 1.5rem;
+        text-align: left;
     }
 
-    .cabecalho p:before {
+    .nome-header2 {
         display: inline-block;
+        margin: .3em auto auto .1em;
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+
+    header p:before {
+        position: relative;
         content: url("../Imagens/Logo16x16.png");
-        margin-right: 1em;
+        margin-right: .3em;
         width: 16px;
         height: 16px;
     }
 
-    .cabecalho li:not(#lista-menu5) {
-        display: none;
-    }
-
-    .menu {
+    #menu {
         display: block;
         position: absolute;
-        float: right;
-        margin: 1.6% auto 1% 57%;
-        font-size: 0.6em;
+        width: 105%;
+        top: 45px;
+        right: -7em;
+        background: #F5F5F5;
+        transition: .6s;
+        height: 0;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav-menu.active #menu {
+        height: 100vh;
+        visibility: visible;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 0 0 1.7rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
     }
 
     /* Seção Apresentação */
 
     .apresentacao {
-        height: 270px;
+        height: 250px;
     }
 
     .apresentacao img {
-        width: 176px;
-        height: 176px;
+        border: 1px solid black;
+        width: 98px;
+        height: 98px;
         display: block;
-        float: right;
-        margin: 2.5em 3em 0 0;
+        float: left;
+        margin: -2em 0 0 .3em;
     }
 
     .apresentacao h1 {
         display: block;
-        font-size: 25px;
+        font-size: 1.2rem;
         font-weight: bold;
-        margin: 2.4em 0 0.5em 1em;
+        margin: 4em 0 0.5em 0.3em;
+        width: 90%;
     }
 
     .apresentacao p {
-        font-size: 16px;
+        font-size: 0.8rem;
         display: block;
         flex-wrap: wrap;
-        margin: 0 0 1em 1.6em;
-        width: 60%;
+        margin: 1em 0 1em .5em;
+        width: 90%;
     }
 
     .links-sociais {
-        width: 50%;
-        margin: 0 0 0 1.6em;
+        width: 90%;
+        margin: -0.5em 0.1em 0 0.4em;
     }
     .links-sociais li {
         display: inline-block;
         margin-right: 25px;
     }
 
+    .links-sociais a {
+        font-size: .78rem;
+    }
+
+    .links-sociais li::after {
+        content: url(../Imagens/seta-link4.svg);
+        margin-top: 0;
+        margin-left: 0.3em;
+        width: 5px;
+        height: 5px;
+    }
+
     /* Seção Sobre Mim */
 
     .sobre-mim {
         height: 256px;
-        padding-top: 35px;
+        padding-top: 15px;
     }
 
     .sobre-mim h2 {
         display: block;
-        margin: 0 0 0 1.6em;
-        font-size: 22px;
+        margin: 0 0 0 .6em;
+        font-size: 21px;
     }
     .sobre-mim p {
         display: block;
-        width: 90%;
-        margin: 2em 0 0 2.5em;
+        width: 89%;
+        margin: 1em 1.5em 0 1em;
         font-size: 14px;
     }
 
@@ -110,13 +141,13 @@
     .skills ul {
         display: flex;
         flex-wrap: wrap;
-        width: 60%;
+        width: 90%;
         margin: auto;
     }
 
     .skills h2 {
         text-align: center;
-        font-size: 32px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 700;
         line-height: 38px;
@@ -125,12 +156,12 @@
     }
     .skills p {
         position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: 62% auto 1% 5%;
         font-weight: bold;
     }
     .skills li {
-        width: 194px;
-        height: 196px;
+        width: 156px;
+        height: 118px;
         background-color: #ffffff;
         display: inline-block;
         margin: 5% auto;
@@ -141,7 +172,7 @@
     }
     .skills img {
         position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 42% auto 1% 5%;
     }
 
     .hobbies {
@@ -150,12 +181,12 @@
     .hobbies ul {
         display: flex;
         flex-wrap: wrap;
-        width: 60%;
+        width: 90%;
         margin: auto;
     }
     .hobbies h2 {
         text-align: center;
-        font-size: 32px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 700;
         line-height: 38px;
@@ -163,12 +194,12 @@
     }
     .hobbies p {
         position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: 63% auto 1% 5%;
         font-weight: bold;
     }
     .hobbies li {
-        width: 194px;
-        height: 196px;
+        width: 156px;
+        height: 118px;
         background-color: #ffffff;
         display: inline-block;
         margin: 5% auto;
@@ -178,7 +209,7 @@
     }
     .hobbies img {
         position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 42% auto 1% 5%;
     }
 
     /* Seção Formação Acadêmica */
@@ -198,14 +229,14 @@
     .formacoes {
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        width: 90%;
         margin: auto;
         justify-content: space-between;
     }
     .bloco-formacoes {
         background-color: #ffffff;
         display: inline-block;
-        margin: 8% auto 5% auto;
+        margin: 1em auto 1em .5em;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
         position: relative;
@@ -224,7 +255,7 @@
     }
 
     .formacoes div h3 {
-        margin: 0.02em 0 0 0;
+        margin: -0.5em 0 0 .7em;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -233,7 +264,7 @@
 
     }
     .formacoes div p {
-        margin: 0.05em 0 2em 0;
+        margin: 0.05em 0 2em .7em;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -246,7 +277,7 @@
 
     .formulario {
         display: flex;
-        margin: 10% auto;
+        margin: 1.5em auto 2.5em auto;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
@@ -254,5 +285,50 @@
 
     .formulario img {
         display: none;
+    }
+
+    form h3 {
+        margin: 0 0 10px .7em;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: left;
+    }
+    form legend {
+        margin: 0 0 3em 1em;
+        font-size: .9rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1rem;
+        text-align: left;
+    }
+
+    label  {
+        display: block;
+        font-size: 0.8rem;
+        margin-bottom: -1.3rem;
+        margin-left: 1.5em;
+    }
+
+    form input {
+        display: block;
+        margin: 0 0 2em .8em;
+        padding: 9px 15px 2px;
+        width: 90%;
+        height: 60px;
+    }
+
+    form textarea {
+        padding: 5px 10px;
+        margin: 0 0 1.5em .8em;
+        width: 90%;
+    }
+
+    input[type='submit'] {
+        color: white;
+        background-color: #2A7AE4;
+        width: 96%;
+        margin-left: -.4em;
     }
 }
