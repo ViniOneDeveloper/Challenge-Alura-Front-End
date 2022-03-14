@@ -1,7 +1,7 @@
 
 /* Responsividade padrão Mobile */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 570px) {
     body, main, .cabecalho, .sobre-mim,
     .container-skills-hobbies, .formacao,
     .experiencia, .formulario, footer {
@@ -64,7 +64,6 @@
     }
 
     .apresentacao img {
-        border: 1px solid black;
         width: 98px;
         height: 98px;
         display: block;
@@ -112,7 +111,7 @@
     /* Seção Sobre Mim */
 
     .sobre-mim {
-        height: 256px;
+        height: 270px;
         padding-top: 15px;
     }
 
@@ -128,6 +127,10 @@
         font-size: 14px;
     }
 
+    .assinatura {
+        font-size: 30px;
+    }
+
     /* Seção Skills e Hobbies */
 
     .container-skills-hobbies {
@@ -141,7 +144,7 @@
     .skills ul {
         display: flex;
         flex-wrap: wrap;
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
 
@@ -181,7 +184,7 @@
     .hobbies ul {
         display: flex;
         flex-wrap: wrap;
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
     .hobbies h2 {
@@ -229,18 +232,18 @@
     .formacoes {
         display: flex;
         flex-wrap: wrap;
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
     }
     .bloco-formacoes {
         background-color: #ffffff;
         display: inline-block;
-        margin: 1em auto 1em .5em;
+        margin: 1em auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
         position: relative;
-        width: 300px;
+        width: 350px;
         height: 168px;
     }
 
@@ -331,4 +334,92 @@
         width: 96%;
         margin-left: -.4em;
     }
+}
+
+@media screen and (max-width: 376px) {
+        .container-skills-hobbies {
+            padding-bottom: 4%;
+        }
+
+        .skills {
+            display: block;
+        }
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: auto;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+            padding-top: 2rem;
+
+        }
+        .skills p {
+            position: absolute;
+            margin: 85% auto 1% 5%;
+            font-weight: bold;
+        }
+        .skills li {
+            width: 154px;
+            height: 156px;
+            background-color: #ffffff;
+            display: inline-block;
+            margin: 5% auto;
+            border-radius: 2%;
+            box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+            position: relative;
+
+        }
+        .skills img {
+            position: absolute;
+            margin: 62% auto 1% 5%;
+        }
+
+        .hobbies {
+            display: block;
+        }
+        .hobbies ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: auto;
+        }
+        .hobbies h2 {
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+            padding-top: 3rem;
+        }
+        .hobbies p {
+            position: absolute;
+            margin: 85% auto 1% 5%;
+            font-weight: bold;
+        }
+        .hobbies li {
+            width: 154px;
+            height: 156px;
+            background-color: #ffffff;
+            display: inline-block;
+            margin: 5% auto;
+            border-radius: 2%;
+            box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
+            position: relative;
+        }
+        .hobbies img {
+            position: absolute;
+            margin: 62% auto 1% 5%;
+        }
+
+
+    }
+
 }

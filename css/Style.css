@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 
 * {
     box-sizing: border-box;
@@ -26,10 +27,10 @@ header {
     display: none;
 }
 
-header p {
+.nome-header1 {
   /*  display: inline-block;
     position: absolute;*/
-    margin: 0.1rem auto auto 5em;
+    margin: 0.1em auto auto 5em;
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -72,13 +73,15 @@ main {}
     padding: 30px 10px;
 }
 .apresentacao img {
-    width: 408px;
-    height: 408px;
+    width: 28%;
+    /* width: 408px;
+     height: 408px; */
     border-radius: 90%;
     display: block;
     float: right;
-    margin: 3em 9em 0 0;
+    margin: 3em 6em 0 0;
 }
+
 .apresentacao h1 {
     display: block;
     font-size: 52px;
@@ -133,6 +136,12 @@ main {}
     display: block;
     width: 60%;
     margin: 2% 0 0 8%;
+}
+
+.assinatura {
+    font-family: 'Passions Conflict', cursive;
+    font-size: 45px;
+    font-style: italic;
 }
 
 /* Seção Skills e Hobbies */
@@ -383,3 +392,309 @@ footer {
 }
 footer p {}
 
+
+/* Ajuste de quebra de elementos */
+@media screen and (max-width: 1265px) {
+
+    .nome-header1 {
+        /*  display: inline-block;
+          position: absolute;*/
+        margin: 0.1em auto auto 3.5em;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    header p:before {
+        display: inline-block;
+        content: url("../Imagens/Logo.png");
+        margin-right: 1rem;
+        margin-top: 0.2rem;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 99%;
+        top: 70px;
+        right: -7em;
+        background: #F5F5F5;
+        transition: .6s;
+        height: 0;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav-menu.active #menu {
+        height: 70vh;
+        visibility: visible;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    #btn-mobile {
+        display: flex;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 1rem;
+        margin: auto 5em auto auto;
+    }
+
+    #hamburguer {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav-menu.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav-menu.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav-menu.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .apresentacao {
+        height: 430px;
+    }
+
+    .apresentacao img {
+        width: 28%;
+        /* width: 308px;
+         height: 308px; */
+        border-radius: 90%;
+        display: block;
+        float: right;
+        margin: 2em 6em 0 0;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 45px;
+        font-weight: bold;
+        margin: 2em 0 0.5em 2em;
+        width: 55%;
+    }
+    .apresentacao p {
+        font-size: 20px;
+        display: block;
+        flex-wrap: wrap;
+        margin: 0 0 1em 4.5em;
+        width: 53%;
+    }
+    .links-sociais {
+        width: 40%;
+        margin: 0 0 0 5.5em;
+    }
+
+    .links-sociais li {
+        display: inline-block;
+        margin-right: 38px;
+    }
+
+    .links-sociais a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+    }
+
+    .links-sociais li::after {
+        content: url(../Imagens/seta-link2.png);
+        position: absolute;
+        margin-left: .2px;
+        margin-top: -5px;
+
+    }
+
+    .assinatura {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 3.5rem;
+        font-style: italic;
+    }
+
+    .formulario img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .nome-header1 {
+        margin: 0.3em auto auto 2.8em;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    header p:before {
+        display: inline-block;
+        content: url("../Imagens/Logo.png");
+        margin-right: .3em;
+    }
+
+    .apresentacao {
+        height: 360px;
+    }
+
+    .apresentacao img {
+        width: 25%;
+        /* width: 308px;
+         height: 308px; */
+        border-radius: 90%;
+        display: block;
+        float: right;
+        margin: 2em 6em 0 0;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 2em 0 0.5em 1.8em;
+        width: 55%;
+    }
+    .apresentacao p {
+        font-size: 16px;
+        display: block;
+        flex-wrap: wrap;
+        margin: 0 0 1em 3.5em;
+        width: 53%;
+    }
+    .links-sociais {
+        width: 48%;
+        margin: 0 0 0 3.5em;
+    }
+
+    .links-sociais li {
+        display: inline-block;
+        margin-right: 33px;
+    }
+
+    .links-sociais a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    .links-sociais li::after {
+        content: url(../Imagens/seta-link2.png);
+        position: absolute;
+        margin-left: .2px;
+        margin-top: -5px;
+
+    }
+
+    .sobre-mim {
+        height: 256px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 3em;
+        font-size: 22px;
+    }
+    .sobre-mim p {
+        display: block;
+        width: 60%;
+        margin: 2em 0 0 4.5em;
+        font-size: 14px;
+    }
+
+    .assinatura {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 6rem;
+        font-style: italic;
+    }
+
+    .formacoes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width: 894px) {
+    .formacoes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .bloco-formacoes {
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 8% auto 5% auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        position: relative;
+        width: 380px;
+        height: 248px;
+    }
+
+    .formacoes div h3 {
+        margin: 0.02em 0 0 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: left;
+
+    }
+
+    .formacoes div p {
+        margin: 0.05em 0 2em 0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: left;
+        padding-bottom: 2%;
+    }
+
+}
+
+@media screen and (max-width: 869px){
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+    .hobbies ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+}

@@ -1,78 +1,6 @@
 
 /* Responsividade padrão tablet */
 
-@media screen and (max-width: 1225px) {
-
-    #menu {
-        display: block;
-        position: absolute;
-        width: 99%;
-        top: 70px;
-        right: -7em;
-        background: #F5F5F5;
-        transition: .6s;
-        height: 0;
-        z-index: 1000;
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-
-    #nav-menu.active #menu {
-        height: 70vh;
-        visibility: visible;
-    }
-
-    #menu a {
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, .05);
-    }
-
-    #btn-mobile {
-        display: flex;
-    }
-
-    #btn-mobile {
-        display: flex;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: 1rem;
-    }
-
-    #hamburguer {
-        border-top: 2px solid;
-        width: 20px;
-    }
-    
-    #hamburguer::after, #hamburguer::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-
-    #nav-menu.active #hamburguer {
-        border-top-color: transparent;
-    }
-
-    #nav-menu.active #hamburguer::before {
-        transform: rotate(135deg);
-    }
-
-    #nav-menu.active #hamburguer::after {
-        transform: rotate(-135deg);
-        top: -7px;
-    }
-}
-
-
 @media screen and (max-width: 830px) {
     body, main, .cabecalho, .sobre-mim,
     .container-skills-hobbies, .formacao,
@@ -81,9 +9,10 @@
     }
     /* Header */
 
-    header p {
-        margin: 0.3% auto auto 4%;
+    .nome-header1 {
+        margin: 0.3em auto auto 1em;
         font-weight: bold;
+        font-size: 16px;
     }
 
     header p:before {
@@ -96,6 +25,17 @@
         display: none;
     }
 
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 1rem;
+        margin: auto 3em auto auto;
+    }
+
     /* Seção Apresentação */
 
     .apresentacao {
@@ -103,11 +43,11 @@
     }
 
     .apresentacao img {
-        width: 176px;
-        height: 176px;
+        width: 196px;
+        height: 196px;
         display: block;
         float: right;
-        margin: 2.5em 3em 0 0;
+        margin: 1em 4em 0 0;
     }
 
     .apresentacao h1 {
@@ -126,12 +66,24 @@
     }
 
     .links-sociais {
-        width: 50%;
-        margin: 0 0 0 1.6em;
+        width: 90%;
+        margin: -0.5em 0.1em 0 1.5em;
     }
     .links-sociais li {
         display: inline-block;
         margin-right: 25px;
+    }
+
+    .links-sociais a {
+        font-size: .78rem;
+    }
+
+    .links-sociais li::after {
+        content: url(../Imagens/seta-link4.svg);
+        margin-top: 0;
+        margin-left: 0.3em;
+        width: 5px;
+        height: 5px;
     }
 
     /* Seção Sobre Mim */
@@ -151,6 +103,12 @@
         width: 90%;
         margin: 2em 0 0 2.5em;
         font-size: 14px;
+    }
+
+    .assinatura {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 3.5rem;
+        font-style: italic;
     }
 
     /* Seção Skills e Hobbies */
@@ -254,7 +212,7 @@
     .formacoes {
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        width: 90%;
         margin: auto;
         justify-content: space-between;
     }
@@ -312,3 +270,191 @@
         display: none;
     }
 }
+
+/* Ajuste de quebra de elementos */
+
+@media screen and (max-width: 675px) {
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 1rem;
+        margin: auto 0.5em auto auto;
+    }
+
+    .apresentacao {
+        height: 270px;
+    }
+
+    .apresentacao img {
+        width: 166px;
+        height: 166px;
+        display: block;
+        float: right;
+        margin: 1.5em 2em 0 0;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 2.4em 0 0.5em 1em;
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+        display: block;
+        flex-wrap: wrap;
+        margin: 0 0 1em 1.6em;
+        width: 60%;
+    }
+
+    .links-sociais {
+        width: 60%;
+        margin: 0 0 0 1.3em;
+    }
+    .links-sociais li {
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    .links-sociais a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    .assinatura {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 3.5rem;
+        font-style: italic;
+    }
+
+    .formacoes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .bloco-formacoes {
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 8% auto 5% auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        position: relative;
+        width: 250px;
+        height: 128px;
+    }
+
+    .formacoes div h3 {
+        margin: 0.02em 0 0 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: left;
+
+    }
+    .formacoes div p {
+        margin: 0.05em 0 2em 0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: left;
+        padding-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 647px){
+    .container-skills-hobbies {
+        padding-bottom: 4%;
+    }
+
+    .skills {
+        display: block;
+    }
+
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    .skills h2 {
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        padding-top: 2rem;
+
+    }
+    .skills p {
+        position: absolute;
+        margin: 85% auto 1% 5%;
+        font-weight: bold;
+    }
+    .skills li {
+        width: 174px;
+        height: 176px;
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 5% auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        position: relative;
+
+    }
+    .skills img {
+        position: absolute;
+        margin: 62% auto 1% 5%;
+    }
+
+    .hobbies {
+        display: block;
+    }
+    .hobbies ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+    .hobbies h2 {
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        padding-top: 3rem;
+    }
+    .hobbies p {
+        position: absolute;
+        margin: 85% auto 1% 5%;
+        font-weight: bold;
+    }
+    .hobbies li {
+        width: 194px;
+        height: 196px;
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 5% auto;
+        border-radius: 2%;
+        box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
+        position: relative;
+    }
+    .hobbies img {
+        position: absolute;
+        margin: 62% auto 1% 5%;
+    }
+
+}
+
