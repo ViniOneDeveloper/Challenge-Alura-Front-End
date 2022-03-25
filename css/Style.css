@@ -16,11 +16,13 @@ body {
 /* Header */
 header {
     background-color: #F5F5F5;
+    width: 100%;
     height: 70px;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 
 #btn-mobile {
@@ -28,10 +30,8 @@ header {
 }
 
 .nome-header1 {
-  /*  display: inline-block;
-    position: absolute;*/
-    margin: 0.1em auto auto 5em;
-    font-size: 1.2rem;
+    margin: -0.1em auto auto 5em;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -59,6 +59,11 @@ header p:before {
     padding: 0.5rem;
 }
 
+#menu a:hover {
+    color: #053e8c;
+    font-weight: 700;
+}
+
 .gmail {
     font-weight: 700;
 }
@@ -69,26 +74,29 @@ main {}
 /* Seção de apresentação */
 .apresentacao {
     background-color: #F5F5F5;
-    height: 520px;
+    height: 500px;
     padding: 30px 10px;
 }
-.apresentacao img {
+.foto-perfil {
     width: 28%;
-    /* width: 408px;
-     height: 408px; */
     border-radius: 90%;
     display: block;
     float: right;
-    margin: 3em 6em 0 0;
+    margin: 4.5em 6em 0 0;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05, 1.05);
 }
 
 .apresentacao h1 {
     display: block;
     font-size: 52px;
     font-weight: bold;
-    margin: 2.4em 0 0.5em 2.1em;
+    margin: 2.5em 0 0.5em 2.1em;
     width: 55%;
 }
+
 .apresentacao p {
     font-size: 22px;
     display: block;
@@ -96,6 +104,11 @@ main {}
     margin: 0 0 1em 5em;
     width: 53%;
 }
+
+.label-seta-link {
+    display: inline-block;
+}
+
 .links-sociais {
     width: 40%;
     margin: 0 0 0 7em;
@@ -112,19 +125,23 @@ main {}
     font-size: 16px;
 }
 
-.links-sociais li::after {
-    content: url(../Imagens/seta-link2.png);
-    position: absolute;
-    margin-left: .2px;
-    margin-top: -5px;
-
+.links-sociais a:hover {
+    color: #053e8c;
+    font-weight: 700;
 }
+
+.seta-link {
+    width: 11px;
+    height: 11px;
+    margin-left: .2em;
+}
+
 
 /* Seção Sobre Mim */
 .sobre-mim {
     background-color: #D4E4FA;
-    height: 343px;
-    padding-top: 70px;
+    height: 650px;
+    padding-top: 50px;
 }
 
 .sobre-mim h2 {
@@ -134,7 +151,7 @@ main {}
 }
 .sobre-mim p {
     display: block;
-    width: 60%;
+    width: 85%;
     margin: 2% 0 0 8%;
 }
 
@@ -149,6 +166,11 @@ main {}
     background-color: #F5F5F5;
     padding-bottom: 4%;
 }
+
+.container-skills-hobbies ul li:hover {
+    transform: scale(1.1, 1.1);
+}
+
 .skills {
     display: block;
 }
@@ -169,35 +191,38 @@ main {}
     padding-top: 3rem;
 
 }
+
 .skills p {
-    position: absolute;
-    margin: 85% auto 1% 5%;
+    margin: -4em auto 5em .5em;
     font-weight: bold;
 }
+
 .skills li {
-    width: 174px;
-    height: 176px;
+    width: 200px;
+    height: 196px;
     background-color: #ffffff;
     display: inline-block;
     margin: 5% auto;
     border-radius: 2%;
     box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
-    position: relative;
+    padding: 0 100px 0 0 ;
+}
 
-}
 .skills img {
-    position: absolute;
-    margin: 62% auto 1% 5%;
+    margin: 7.5em auto 5em .5em;
 }
+
 .hobbies {
     display: block;
 }
+
 .hobbies ul {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
 }
+
 .hobbies h2 {
     text-align: center;
     font-size: 32px;
@@ -206,24 +231,24 @@ main {}
     line-height: 38px;
     padding-top: 3rem;
 }
+
 .hobbies p {
-    position: absolute;
-    margin: 85% auto 1% 5%;
+    margin: -4em auto 5em .5em;
     font-weight: bold;
 }
+
 .hobbies li {
-    width: 174px;
-    height: 176px;
+    width: 200px;
+    height: 196px;
     background-color: #ffffff;
     display: inline-block;
     margin: 5% auto;
     border-radius: 2%;
     box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
-    position: relative;
 }
+
 .hobbies img {
-    position: absolute;
-    margin: 62% auto 1% 5%;
+    margin: 7.5em auto 5em .5em;
 }
 
 /* Seção Formação */
@@ -231,6 +256,12 @@ main {}
 .formacao {
     background-color: #D4E4FA;
 }
+
+.bloco-formacoes:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 2px 2px 2px 2px rgba(175, 174, 174, 0.55);
+}
+
 .formacao h2 {
     text-align: center;
     font-size: 32px;
@@ -238,6 +269,7 @@ main {}
     font-weight: 700;
     line-height: 38px;
     padding-top: 3rem;
+    margin-bottom: 1em;
 }
 .formacoes {
     display: flex;
@@ -249,10 +281,9 @@ main {}
 .bloco-formacoes {
     background-color: #ffffff;
     display: inline-block;
-    margin: 8% auto 5% auto;
+    margin: 10% auto 5% auto;
     border-radius: 2%;
     box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-    position: relative;
     width: 400px;
     height: 268px;
 }
@@ -481,10 +512,10 @@ footer p {}
     }
 
     .apresentacao {
-        height: 430px;
+        height: 500px;
     }
 
-    .apresentacao img {
+    .foto-perfil img {
         width: 28%;
         /* width: 308px;
          height: 308px; */
@@ -498,7 +529,7 @@ footer p {}
         display: block;
         font-size: 45px;
         font-weight: bold;
-        margin: 2em 0 0.5em 2em;
+        margin: 3.5em 0 0.5em 2em;
         width: 55%;
     }
     .apresentacao p {
@@ -509,7 +540,7 @@ footer p {}
         width: 53%;
     }
     .links-sociais {
-        width: 40%;
+        width: 50%;
         margin: 0 0 0 5.5em;
     }
 
@@ -524,13 +555,6 @@ footer p {}
         font-size: 16px;
     }
 
-    .links-sociais li::after {
-        content: url(../Imagens/seta-link2.png);
-        position: absolute;
-        margin-left: .2px;
-        margin-top: -5px;
-
-    }
 
     .assinatura {
         font-family: 'Passions Conflict', cursive;
@@ -541,6 +565,36 @@ footer p {}
     .formulario img {
         display: none;
     }
+}
+
+@media screen and (max-width: 1165px) {
+
+    /* Seção Sobre Mim */
+
+    .sobre-mim {
+        background-color: #D4E4FA;
+        height: 750px;
+        padding-top: 50px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 8%;
+        font-size: 32px;
+    }
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2% 0 0 8%;
+    }
+
+    .assinatura {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 45px;
+        font-style: italic;
+    }
+
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -558,13 +612,13 @@ footer p {}
     }
 
     .apresentacao {
-        height: 360px;
+        height: 450px;
     }
 
-    .apresentacao img {
-        width: 25%;
-        /* width: 308px;
-         height: 308px; */
+    .foto-perfil img {
+        /*   width: 25%;*/
+        width: 308px;
+        height: 308px;
         border-radius: 90%;
         display: block;
         float: right;
@@ -575,7 +629,7 @@ footer p {}
         display: block;
         font-size: 32px;
         font-weight: bold;
-        margin: 2em 0 0.5em 1.8em;
+        margin: 4.5em 0 0.5em 1.8em;
         width: 55%;
     }
     .apresentacao p {
@@ -601,16 +655,9 @@ footer p {}
         font-size: 14px;
     }
 
-    .links-sociais li::after {
-        content: url(../Imagens/seta-link2.png);
-        position: absolute;
-        margin-left: .2px;
-        margin-top: -5px;
-
-    }
 
     .sobre-mim {
-        height: 256px;
+        height: 700px;
         padding-top: 35px;
     }
 
@@ -621,15 +668,19 @@ footer p {}
     }
     .sobre-mim p {
         display: block;
-        width: 60%;
+        width: 85%;
         margin: 2em 0 0 4.5em;
         font-size: 14px;
     }
 
+
+    .assinatura {
+        font-size: 50px;
+        font-style: italic;
+    }
+
     .assinatura {
         font-family: 'Passions Conflict', cursive;
-        font-size: 6rem;
-        font-style: italic;
     }
 
     .formacoes {
@@ -642,7 +693,151 @@ footer p {}
 
 }
 
-@media screen and (max-width: 894px) {
+@media screen and (max-width: 999px) {
+
+    /* Seção Skills e Hobbies */
+    .container-skills-hobbies {
+        background-color: #F5F5F5;
+        padding-bottom: 4%;
+    }
+
+    .container-skills-hobbies ul li:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .skills {
+        display: block;
+    }
+
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+
+    .skills h2 {
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        padding-top: 3rem;
+
+    }
+
+    .skills p {
+        margin: -4em auto 5em .5em;
+        font-weight: bold;
+    }
+
+    .skills li {
+        width: 200px;
+        height: 196px;
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 5% auto;
+        border-radius: 2%;
+        box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
+        padding: 0 100px 0 0 ;
+    }
+
+    .skills img {
+        margin: 7.5em auto 5em .5em;
+    }
+
+    .hobbies {
+        display: block;
+    }
+
+    .hobbies ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+
+    .hobbies h2 {
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        padding-top: 3rem;
+    }
+
+    .hobbies p {
+        margin: -4em auto 5em .5em;
+        font-weight: bold;
+    }
+
+    .hobbies li {
+        width: 200px;
+        height: 196px;
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 5% auto;
+        border-radius: 2%;
+        box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
+    }
+
+    .hobbies img {
+        margin: 7.5em auto 5em .5em;
+    }
+}
+
+@media screen and (max-width: 910px) {
+
+    .apresentacao {
+        height: 360px;
+    }
+
+    .foto-perfil img {
+        /*   width: 25%;*/
+        width: 308px;
+        height: 308px;
+        border-radius: 90%;
+        display: block;
+        float: right;
+        margin: 2em 6em 0 0;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 3em 0 0.5em 1.8em;
+        width: 55%;
+    }
+    .apresentacao p {
+        font-size: 16px;
+        display: block;
+        flex-wrap: wrap;
+        margin: 0 0 1em 3.5em;
+        width: 53%;
+    }
+    .links-sociais {
+        width: 55%;
+        margin: 0 0 0 3.5em;
+    }
+
+    .links-sociais li {
+        display: inline-block;
+        margin-right: 33px;
+    }
+
+    .links-sociais a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    .seta-link {
+        width: 11px;
+        height: 11px;
+        margin-left: .2em;
+    }
+
     .formacoes {
         display: flex;
         flex-wrap: wrap;

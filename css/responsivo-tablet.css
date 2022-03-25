@@ -39,22 +39,22 @@
     /* Seção Apresentação */
 
     .apresentacao {
-        height: 270px;
+        height: 310px;
     }
 
-    .apresentacao img {
+    .foto-perfil {
         width: 196px;
         height: 196px;
         display: block;
         float: right;
-        margin: 1em 4em 0 0;
+        margin: 3em 4em 0 0;
     }
 
     .apresentacao h1 {
         display: block;
         font-size: 25px;
         font-weight: bold;
-        margin: 2.4em 0 0.5em 1em;
+        margin: 3.5em 0 0.5em 1em;
     }
 
     .apresentacao p {
@@ -78,18 +78,10 @@
         font-size: .78rem;
     }
 
-    .links-sociais li::after {
-        content: url(../Imagens/seta-link4.svg);
-        margin-top: 0;
-        margin-left: 0.3em;
-        width: 5px;
-        height: 5px;
-    }
-
     /* Seção Sobre Mim */
 
     .sobre-mim {
-        height: 256px;
+        height: 650px;
         padding-top: 35px;
     }
 
@@ -100,7 +92,7 @@
     }
     .sobre-mim p {
         display: block;
-        width: 90%;
+        width: 85%;
         margin: 2em 0 0 2.5em;
         font-size: 14px;
     }
@@ -273,7 +265,50 @@
 
 /* Ajuste de quebra de elementos */
 
+@media screen and (max-width: 770px) {
+    .sobre-mim {
+        height: 730px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .sobre-mim {
+        height: 690px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 675px) {
+
+    .sobre-mim {
+        height: 720px;
+        padding-top: 35px;
+    }
 
     #btn-mobile {
         display: flex;
@@ -290,31 +325,31 @@
         height: 270px;
     }
 
-    .apresentacao img {
+    .foto-perfil {
         width: 166px;
         height: 166px;
         display: block;
         float: right;
-        margin: 1.5em 2em 0 0;
+        margin: 3.5em 2em 0 0;
     }
 
     .apresentacao h1 {
         display: block;
         font-size: 20px;
         font-weight: bold;
-        margin: 2.4em 0 0.5em 1em;
+        margin: 4em 0 0.5em 1em;
     }
 
     .apresentacao p {
         font-size: 14px;
         display: block;
         flex-wrap: wrap;
-        margin: 0 0 1em 1.6em;
+        margin: .5em 0 1em 1.6em;
         width: 60%;
     }
 
     .links-sociais {
-        width: 60%;
+        width: 65%;
         margin: 0 0 0 1.3em;
     }
     .links-sociais li {
@@ -373,7 +408,67 @@
     }
 }
 
-@media screen and (max-width: 647px){
+@media screen and (max-width: 653px){
+
+    .sobre-mim {
+        height: 710px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 13px;
+    }
+
+    .apresentacao {
+        height: 270px;
+    }
+
+    .foto-perfil {
+        width: 166px;
+        height: 166px;
+        display: block;
+        float: right;
+        margin: 3.5em 2em 0 0;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 4em 0 0.5em 1em;
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+        display: block;
+        flex-wrap: wrap;
+        margin: .5em 0 1em 1.6em;
+        width: 60%;
+    }
+
+    .links-sociais {
+        width: 65%;
+        margin: 0 0 0 1.3em;
+    }
+    .links-sociais li {
+        display: inline-block;
+        margin-right: 22px;
+    }
+
+    .links-sociais a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 12px;
+    }
+
     .container-skills-hobbies {
         padding-bottom: 4%;
     }
@@ -404,7 +499,7 @@
         font-weight: bold;
     }
     .skills li {
-        width: 174px;
+        width: 175px;
         height: 176px;
         background-color: #ffffff;
         display: inline-block;
@@ -456,5 +551,47 @@
         margin: 62% auto 1% 5%;
     }
 
+}
+
+@media screen and (max-width: 639px) {
+
+    .sobre-mim {
+        height: 700px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .sobre-mim {
+        height: 700px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 13px;
+    }
 }
 

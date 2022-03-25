@@ -60,22 +60,22 @@
     /* Seção Apresentação */
 
     .apresentacao {
-        height: 250px;
+        height: 310px;
     }
 
-    .apresentacao img {
+    .foto-perfil {
         width: 98px;
         height: 98px;
         display: block;
         float: left;
-        margin: -2em 0 0 .3em;
+        margin: 2.5em 0 0 .3em;
     }
 
     .apresentacao h1 {
         display: block;
         font-size: 1.2rem;
         font-weight: bold;
-        margin: 4em 0 0.5em 0.3em;
+        margin: 8em 0 0.5em 0.3em;
         width: 90%;
     }
 
@@ -93,38 +93,32 @@
     }
     .links-sociais li {
         display: inline-block;
-        margin-right: 25px;
+        margin-right: 18px;
     }
 
     .links-sociais a {
         font-size: .78rem;
     }
 
-    .links-sociais li::after {
-        content: url(../Imagens/seta-link4.svg);
-        margin-top: 0;
-        margin-left: 0.3em;
-        width: 5px;
-        height: 5px;
-    }
 
     /* Seção Sobre Mim */
 
     .sobre-mim {
-        height: 270px;
-        padding-top: 15px;
+        height: 700px;
+        padding-top: 35px;
     }
 
     .sobre-mim h2 {
         display: block;
-        margin: 0 0 0 .6em;
-        font-size: 21px;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
     }
+
     .sobre-mim p {
         display: block;
-        width: 89%;
-        margin: 1em 1.5em 0 1em;
-        font-size: 14px;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 13px;
     }
 
     .assinatura {
@@ -336,8 +330,132 @@
     }
 }
 
-@media screen and (max-width: 376px) {
-        .container-skills-hobbies {
+@media screen and (max-width: 550px) {
+
+    .sobre-mim {
+        height: 700px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .sobre-mim {
+        height: 720px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+
+    .sobre-mim {
+        height: 780px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 85%;
+        margin: 2em 0 0 2.5em;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .apresentacao {
+        height: 310px;
+    }
+
+    .foto-perfil {
+        width: 98px;
+        height: 98px;
+        display: block;
+        float: left;
+        margin: 2.5em 0 0 .3em;
+    }
+
+    .apresentacao h1 {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 8em 0 0.5em 0.3em;
+        width: 90%;
+    }
+
+    .apresentacao p {
+        font-size: 0.7rem;
+        display: block;
+        flex-wrap: wrap;
+        margin: 1em 0 1em .5em;
+        width: 90%;
+    }
+
+    .links-sociais {
+        width: 90%;
+        margin: -0.5em 0.1em 0 0.4em;
+    }
+    .links-sociais li {
+        display: inline-block;
+        margin-right: .5em;
+    }
+
+    .links-sociais a {
+        font-size: .70rem;
+    }
+
+    .sobre-mim {
+        height: 810px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 90%;
+        margin: 2em 0 0 1.5em;
+        font-size: 12px;
+    }
+
+
+    .container-skills-hobbies {
             padding-bottom: 4%;
         }
 
@@ -422,4 +540,74 @@
 
     }
 
+@media screen and (max-width: 380px) {
+
+    .sobre-mim {
+        height: 850px;
+        padding-top: 35px;
+    }
+
+    .sobre-mim h2 {
+        display: block;
+        margin: 0 0 0 1.6em;
+        font-size: 22px;
+    }
+
+    .sobre-mim p {
+        display: block;
+        width: 90%;
+        margin: 2em 0 0 1.5em;
+        font-size: 12px;
+    }
+
+    .formacoes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .bloco-formacoes {
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 1em auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        position: relative;
+        width: 310px;
+        height: 168px;
+    }
+}
+
+@media screen and (max-width: 331px) {
+    .links-sociais {
+        width: 95%;
+        margin: -0.5em 0.1em 0 0.4em;
+    }
+    .links-sociais li {
+        display: inline-block;
+        margin-right: .5em;
+    }
+
+    .links-sociais a {
+        font-size: .70rem;
+    }
+
+    .formacoes {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .bloco-formacoes {
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 1em auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        position: relative;
+        width: 290px;
+        height: 168px;
+    }
 }
