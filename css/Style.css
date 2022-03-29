@@ -703,6 +703,7 @@ footer p {}
 
     .container-skills-hobbies ul li:hover {
         transform: scale(1.1, 1.1);
+        display: inline-block;
     }
 
     .skills {
