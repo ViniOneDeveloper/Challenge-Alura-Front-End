@@ -6,7 +6,7 @@
  const mensagem = document.getElementById('mensagem')
 
  form.addEventListener('submit', (e) => {
-       e.preventDefault()
+
 
        checkInputs()
  })
@@ -33,14 +33,16 @@
 
        if (assuntoValue === '') {
         validandoErro(assunto, 'preencha esse campo');
-       } else if (nomeValue.length < 3) {
-           validandoErro(nome, 'Digite um assunto válido');
+       } else if (assuntoValue.length < 3) {
+           validandoErro(assunto, 'Digite um assunto válido');
        }    else {
         validandoSucesso(assunto)
        }
 
        if (mensagemValue === '') {
         validandoErro(mensagem, 'preencha esse campo');
+       } else if (mensagemValue.length < 3) {
+           validandoErro(mensagem, 'Digite uma mensagem válida');
        } else {
         validandoSucesso(mensagem)
        }
