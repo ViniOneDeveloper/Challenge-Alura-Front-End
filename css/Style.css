@@ -360,6 +360,66 @@ form legend {
     text-align: left;
 }
 
+.form-control.success input, textarea {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.success textarea {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.error input, textarea {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control.error textarea {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control i img {
+    width: 17px;
+    height: 17px;
+    float: right;
+}
+
+.form-control i .img-error, .img-success {
+    display: block;
+    margin-top: -4.3em;
+    margin-right: 1em;
+    visibility: hidden;
+}
+
+.form-control.success i .img-success {
+    visibility: visible;
+}
+
+.form-control.error i .img-error {
+    visibility: visible;
+}
+
+.form-control small {
+    display: block;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    color: #ef0808;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+
+.form-control small.mensagem {
+    margin-top: -.5em;
+}
+
+input:invalid {
+    border: 3px solid #DB5A5A;
+}
+
+
 input, textarea {
     border: 1px solid rgb(225, 223, 223);
     box-shadow: 2px 4px 4px 4px darkgray;
@@ -387,7 +447,7 @@ textarea {
 form input {
     display: block;
     margin: 0 0 30px;
-    padding: 9px 15px 2px;
+    padding: 12px 15px 2px;
     width: 100%;
     height: 60px;
 }
@@ -401,6 +461,7 @@ input[type='submit'] {
     color: white;
     background-color: #2A7AE4;
     width: 60%;
+    cursor: pointer;
 }
 input, textarea {
     width: 100%;
