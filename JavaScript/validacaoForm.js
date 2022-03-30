@@ -6,7 +6,7 @@
  const mensagem = document.getElementById('mensagem')
 
  form.addEventListener('submit', (e) => {
-
+       e.type(onsubmit())
 
        checkInputs()
  })
