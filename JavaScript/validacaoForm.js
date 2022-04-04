@@ -1,12 +1,13 @@
 
+// Esta foi a versão da primeira tentativa de validação de formulário.
+
  const form = document.getElementById('form')
  const nome = document.getElementById('nome')
  const email = document.getElementById('email')
  const assunto = document.getElementById('assunto')
  const mensagem = document.getElementById('mensagem')
 
- form.addEventListener('submit', (e) => {
-       e.type(onsubmit())
+ form.addEventListener('blur', (e) => {
 
        checkInputs()
  })

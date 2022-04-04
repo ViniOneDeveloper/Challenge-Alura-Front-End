@@ -360,20 +360,22 @@ form legend {
     text-align: left;
 }
 
-.form-control.success input, textarea {
-    border: 3px solid #4ECA64;
+.form-control-success input, textarea {
+    border: 2px solid #4ECA64;
 }
 
-.form-control.success textarea {
-    border: 3px solid #4ECA64;
+
+.form-control-error input, textarea {
+    border: 2px solid #DB5A5A;
 }
 
-.form-control.error input, textarea {
-    border: 3px solid #DB5A5A;
+.form-control-success textarea {
+    border: 2px solid #4ECA64;
 }
 
-.form-control.error textarea {
-    border: 3px solid #DB5A5A;
+
+.form-control-error textarea {
+    border: 2px solid #DB5A5A;
 }
 
 .form-control i img {
@@ -389,11 +391,11 @@ form legend {
     visibility: hidden;
 }
 
-.form-control.success i .img-success {
+.form-control-success i .img-success {
     visibility: visible;
 }
 
-.form-control.error i .img-error {
+.form-control-error i .img-error {
     visibility: visible;
 }
 
@@ -406,23 +408,19 @@ form legend {
     visibility: hidden;
 }
 
-.form-control.error small {
+.form-control-error small {
     visibility: visible;
 }
 
 
-.form-control small.mensagem {
+.form-control small .mensagem {
     margin-top: -.5em;
-}
-
-input:invalid {
-    border: 3px solid #DB5A5A;
 }
 
 
 input, textarea {
     border: 1px solid rgb(225, 223, 223);
-    box-shadow: 2px 4px 4px 4px darkgray;
+    box-shadow: 2px 2px 2px 2px darkgray;
 }
 
 label  {
@@ -437,7 +435,7 @@ label:checked {
 }
 
 input:focus, textarea:focus {
-    border-bottom: 4px solid #0c5ec9;
+
 }
 
 textarea {
@@ -457,11 +455,17 @@ form textarea {
     margin: 0 0 18px;
 }
 
-input[type='submit'] {
+#botao {
     color: white;
+    font-size: 1rem;
     background-color: #2A7AE4;
     width: 60%;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
+    margin-top: 1em;
+    box-shadow: 2px 2px 2px 2px darkgray;
 }
 input, textarea {
     width: 100%;
