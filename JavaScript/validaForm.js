@@ -20,7 +20,7 @@ function validaInput(input) {
     if (input.validity.valid) {
         input.parentElement.classList.remove('form-control-error')
         input.parentElement.classList.add('form-control-success')
-        input.parentElement.querySelector('.mensagem-erro').innerHTML = ''
+       // input.parentElement.querySelector('.mensagem-valida').innerHTML = ''
     } else {
         input.parentElement.classList.add('form-control-error')
         input.parentElement.classList.remove('form-control-success')
@@ -45,7 +45,7 @@ function validaTextarea(textarea) {
 }
 
 
-const tiposDeErro = [
+const tiposDeValidacao = [
     'valueMissing',
     'typeMismatch',
     'patternMismatch',
@@ -54,26 +54,26 @@ const tiposDeErro = [
 
 const mensagensDeErro = {
     nome: {
-        valueMissing: 'O campo nome não pode estar vazio',
-        typeMismatch: 'O nome digitado não é válido'
+        valueMissing: 'O campo nome não pode estar vazio &cross;',
+        typeMismatch: 'O nome digitado não é válido &cross;'
     },
     email: {
-        valueMissing: 'O campo de email não pode estar vazio',
-        typeMismatch: 'O email digitado não é válido'
+        valueMissing: 'O campo de email não pode estar vazio &cross;',
+        typeMismatch: 'O email digitado não é válido &cross;'
     },
     assunto: {
-        valueMissing: 'O campo assunto não pode estar vazio',
+        valueMissing: 'O campo assunto não pode estar vazio &cross;',
     },
     mensagem: {
-        valueMissing: 'O campo mensagem não pode estar vazio'
+        valueMissing: 'O campo mensagem não pode estar vazio &cross;'
     }
 }
 
-function mostraMensagemDeErro(tipoDeInput, input, textarea) {
+function mostraMensagemDeErro(tipoDeInput, input) {
     let mensagem = ''
-    tiposDeErro.forEach(erro => {
-        if (input.validity[erro]) {
-            mensagem = mensagensDeErro[tipoDeInput][erro]
+    tiposDeValidacao.forEach(validacao => {
+        if (input.validity[validacao]) {
+            mensagem = mensagensDeErro[tipoDeInput][validacao]
         }
     })
     return mensagem
@@ -81,10 +81,11 @@ function mostraMensagemDeErro(tipoDeInput, input, textarea) {
 
 function mostraMensagemDeErroTextarea(tipoDeTextarea, textarea) {
     let mensagem = ''
-    tiposDeErro.forEach(erro => {
-        if (textarea.validity[erro]) {
-            mensagem = mensagensDeErro[tipoDeTextarea][erro]
+    tiposDeValidacao.forEach(validacao => {
+        if (textarea.validity[validacao]) {
+            mensagem = mensagensDeErro[tipoDeTextarea][validacao]
         }
     })
     return mensagem
 }
+

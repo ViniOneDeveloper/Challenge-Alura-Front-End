@@ -163,46 +163,40 @@
                 <img src="Imagens/foto-contato.png" alt="Foto Contato">
                    <fielset>
                        <form id="form" action="https://formsubmit.co/vinicius.mansao@gmail.com" method="post">
-                          <input type="hidden" name="_captcha" value="false">
-                           <input type="hidden" name="_next" value="https://vinicius-almeeida.github.io/Challenge-Alura-Front-End/obrigado.html">
-                           <h3>Contato</h3>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://vinicius-almeeida.github.io/Challenge-Alura-Front-End/obrigado.html">
+                                <h3>Contato</h3>
 
                            <legend>Quer entrar em contato comigo? <br>
                                Preencha o formulário abaixo que entrarei em contato o mais rápido possível.</legend>
 
                            <div class="form-control">
-                               <label for="nome"> Nome</label>
+                               <label class="label-nome"  for="nome"> Nome</label>
                                <input type="text" class="input" data-tipo="nome" name="Nome" id="nome" required>
-                                <i><img class="img-error" src="Imagens/error.png" alt=""></i>
-                               <i><img class="img-success" src="Imagens/check.png" alt=""></i>
                                <small class="mensagem-erro">Nome incorreto</small>
+                               <span class="mensagem-valida">O campo nome é válido &checkmark;</span>
                            </div>
                            <div class="form-control">
-                               <label for="email"> E-mail</label>
+                               <label class="label-email"  for="email"> E-mail</label>
                                <input  type="email" class="input" data-tipo="email" name="email" id="email" required>
-                               <i><img class="img-error" src="Imagens/error.png" alt=""></i>
-                               <i><img class="img-success" src="Imagens/check.png" alt=""></i>
-                               <small class="mensagem-erro">Email incorreto</small>
+                               <small class="mensagem-erro">Email incorreto </small>
+                               <span class="mensagem-valida">O email digitado é válido &checkmark;</span>
                            </div>
                            <div class="form-control">
-                               <label for="assunto"> Assunto</label>
+                               <label class="label-assunto"  for="assunto"> Assunto</label>
                                <input type="text" class="input" data-tipo="assunto" name="Assunto" id="assunto"  required>
-                               <i><img class="img-error" src="Imagens/error.png" alt=""></i>
-                               <i><img class="img-success" src="Imagens/check.png" alt=""></i>
                                <small class="mensagem-erro">Assunto incorreto</small>
+                               <span class="mensagem-valida">O campo assunto é válido &checkmark;</span>
                            </div>
                            <div class="form-control">
-                               <label for="mensagem">Mensagem</label>
-                               <textarea type="text" class="input" data-tipo="mensagem" name="Mensagem" cols="80" rows="7" id="mensagem" placeholder="Mensagem" required></textarea>
-                               <i><img class="img-error" src="Imagens/error.png" alt=""></i>
-                               <i><img class="img-success" src="Imagens/check.png" alt=""></i>
+                               <label class="label-mensagem" for="mensagem">Mensagem</label>
+                               <textarea type="text" class="textarea" data-tipo="mensagem" name="Mensagem" cols="80" rows="7" id="mensagem" required></textarea>
                                <small  class="mensagem-erro">Mensagem incorreta</small>
+                               <span class="mensagem-valida">O campo mensagem é válido &checkmark;</span>
                            </div>
                            <div class="form-control">
                            <label for="botao"></label>
                                <button type="submit" id="botao" value="Enviar Mensagem">Enviar Mensagem</button>
-                               <i><img class="img-error" src="Imagens/error.png" alt=""></i>
-                               <i><img class="img-success" src="Imagens/check.png" alt=""></i>
                            </div>
                        </form>
                    </fielset>

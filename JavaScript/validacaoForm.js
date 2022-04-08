@@ -1,5 +1,6 @@
 
-// Esta foi a versão da primeira tentativa de validação de formulário.
+// Esta foi a versão da primeira tentativa de validação de formulário que deu mais ou menos certo mas que teve alguns bugs que não conseguia resolver.
+// por isso optei por refazer e deixar este modelo de validação na pasta para verificarem a evolução
 
  const form = document.getElementById('form')
  const nome = document.getElementById('nome')
