@@ -25,6 +25,25 @@
         display: none;
     }
 
+    #menu {
+        display: block;
+        position: absolute;
+        width: 105%;
+        top: 65px;
+        background: #F5F5F5;
+        transition: .6s;
+        height: 0;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 0 0 3.2em;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
     #btn-mobile {
         display: flex;
         padding: .5rem 1rem;
@@ -34,6 +53,11 @@
         cursor: pointer;
         gap: 1rem;
         margin: auto 3em auto auto;
+    }
+
+    #nav-menu.active #menu {
+        height: 57vh;
+        visibility: visible;
     }
 
     /* Seção Apresentação */
@@ -129,11 +153,12 @@
         padding-top: 2rem;
 
     }
+
     .skills p {
-        position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: -4.5em auto 5em .5em;
         font-weight: bold;
     }
+
     .skills li {
         width: 194px;
         height: 196px;
@@ -142,23 +167,23 @@
         margin: 5% auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-        position: relative;
-
     }
+
     .skills img {
-        position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 7.5em auto 5em .5em;
     }
 
     .hobbies {
         display: block;
     }
+
     .hobbies ul {
         display: flex;
         flex-wrap: wrap;
         width: 60%;
         margin: auto;
     }
+
     .hobbies h2 {
         text-align: center;
         font-size: 32px;
@@ -167,11 +192,12 @@
         line-height: 38px;
         padding-top: 3rem;
     }
+
     .hobbies p {
-        position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: -4.5em auto 5em .5em;
         font-weight: bold;
     }
+
     .hobbies li {
         width: 194px;
         height: 196px;
@@ -180,15 +206,14 @@
         margin: 5% auto;
         border-radius: 2%;
         box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
-        position: relative;
     }
+
     .hobbies img {
-        position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 7.5em auto 5em .5em;
     }
+
 
     /* Seção Formação Acadêmica */
-
 
     .formacao {
         background-color: #D4E4FA;
@@ -214,7 +239,6 @@
         margin: 8% auto 5% auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-        position: relative;
         width: 300px;
         height: 168px;
     }
@@ -238,6 +262,7 @@
         text-align: left;
 
     }
+
     .formacoes div p {
         margin: 0.05em 0 2em 0;
         font-size: 14px;
@@ -383,9 +408,13 @@
         margin: 8% auto 5% auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-        position: relative;
         width: 250px;
         height: 128px;
+    }
+
+    .logo-alura {
+        width: 60%;
+        margin: 5% 10% 0 20%;;
     }
 
     .formacoes div h3 {
@@ -469,6 +498,8 @@
         font-size: 12px;
     }
 
+    /* Seção Skills e Hobbies */
+
     .container-skills-hobbies {
         padding-bottom: 4%;
     }
@@ -493,11 +524,12 @@
         padding-top: 2rem;
 
     }
+
     .skills p {
-        position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: -4.5em auto 5em .5em;
         font-weight: bold;
     }
+
     .skills li {
         width: 175px;
         height: 176px;
@@ -506,23 +538,23 @@
         margin: 5% auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-        position: relative;
-
     }
+
     .skills img {
-        position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 7em auto 5em .5em;
     }
 
     .hobbies {
         display: block;
     }
+
     .hobbies ul {
         display: flex;
         flex-wrap: wrap;
         width: 80%;
         margin: auto;
     }
+
     .hobbies h2 {
         text-align: center;
         font-size: 32px;
@@ -531,11 +563,12 @@
         line-height: 38px;
         padding-top: 3rem;
     }
+
     .hobbies p {
-        position: absolute;
-        margin: 85% auto 1% 5%;
+        margin: -4.5em auto 5em .5em;
         font-weight: bold;
     }
+
     .hobbies li {
         width: 194px;
         height: 196px;
@@ -544,11 +577,10 @@
         margin: 5% auto;
         border-radius: 2%;
         box-shadow: 2px 2px 2px rgba(204, 204, 204, 0.76);
-        position: relative;
     }
+
     .hobbies img {
-        position: absolute;
-        margin: 62% auto 1% 5%;
+        margin: 7em auto 5em .5em;
     }
 
 }

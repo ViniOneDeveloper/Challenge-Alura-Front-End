@@ -271,6 +271,7 @@ main {}
     padding-top: 3rem;
     margin-bottom: 1em;
 }
+
 .formacoes {
     display: flex;
     flex-wrap: wrap;
@@ -278,6 +279,7 @@ main {}
     margin: auto;
     justify-content: space-around;
 }
+
 .bloco-formacoes {
     background-color: #ffffff;
     display: inline-block;
@@ -305,8 +307,8 @@ main {}
     font-weight: 700;
     line-height: 26px;
     text-align: left;
-
 }
+
 .formacoes div p {
     margin: 0.2em 0 2em 0;
     font-size: 18px;
@@ -476,11 +478,11 @@ footer p {}
 
 
 /* Ajuste de quebra de elementos */
+
+
 @media screen and (max-width: 1265px) {
 
     .nome-header1 {
-        /*  display: inline-block;
-          position: absolute;*/
         margin: 0.1em auto auto 3.5em;
         font-size: 1.2rem;
         font-weight: 700;
@@ -496,9 +498,9 @@ footer p {}
     #menu {
         display: block;
         position: absolute;
-        width: 99%;
-        top: 70px;
-        right: -7em;
+        width: 105%;
+        top: 60px;
+        right: -8em;
         background: #F5F5F5;
         transition: .6s;
         height: 0;
@@ -508,13 +510,17 @@ footer p {}
     }
 
     #nav-menu.active #menu {
-        height: 70vh;
+        height: 55vh;
         visibility: visible;
+    }
+    
+    #menu.inative a {
+        visibility: hidden;
     }
 
     #menu a {
         padding: 1rem 0;
-        margin: 0 1rem;
+        margin: 0 0 0 8em;
         border-bottom: 2px solid rgba(0, 0, 0, .05);
     }
 
@@ -561,6 +567,10 @@ footer p {}
         transform: rotate(-135deg);
         top: -7px;
     }
+
+    /* =======================================================
+                    Seção apresentação
+       ======================================================= */
 
     .apresentacao {
         height: 500px;
@@ -660,6 +670,35 @@ footer p {}
         display: inline-block;
         content: url("../Imagens/Logo.png");
         margin-right: .3em;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 105%;
+        top: 60px;
+        right: -8em;
+        background: #F5F5F5;
+        transition: .6s;
+        height: 0;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav-menu.active #menu {
+        height: 55vh;
+        visibility: visible;
+    }
+
+    #menu.inative a {
+        visibility: hidden;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 0 0 6em;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
     }
 
     .apresentacao {
@@ -904,7 +943,6 @@ footer p {}
         margin: 8% auto 5% auto;
         border-radius: 2%;
         box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
-        position: relative;
         width: 380px;
         height: 248px;
     }
@@ -943,5 +981,38 @@ footer p {}
         flex-wrap: wrap;
         width: 60%;
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 844px){
+
+    .bloco-formacoes {
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 8% auto 5% auto;
+        border-radius: 2%;
+        box-shadow: 4px 4px 4px rgba(204, 204, 204, 0.76);
+        width: 340px;
+        height: 228px;
+    }
+
+    .formacoes div h3 {
+        margin: 0.02em 0 0 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: left;
+
+    }
+
+    .formacoes div p {
+        margin: 0.05em 0 2em 0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: left;
+        padding-bottom: 2%;
     }
 }
